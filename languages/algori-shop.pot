@@ -1,0 +1,297 @@
+# Copyright (C) 2019 Kevin Bazira
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Algori Shop 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/algori-shop\n"
+"POT-Creation-Date: 2019-02-05 12:17:25+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:32
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: 404.php:43
+msgid "Most Used Categories"
+msgstr ""
+
+#. translators: %1$s: smiley
+#: 404.php:61
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#. translators: 1: title.
+#: comments.php:35
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:41
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:75
+msgid "Would you like to share your thoughts?"
+msgstr ""
+
+#. translators: %s: Proudly powered by .
+#. translators: %s: CMS name, i.e. WordPress.
+#. translators: %s: Comment Author
+#. translators: %s: Site Description
+#: footer.php:33 footer.php:38 functions.php:150 header.php:90
+msgid " %s"
+msgstr ""
+
+#: footer.php:36
+msgid "https://wordpress.org/"
+msgstr ""
+
+#. translators: 1: Theme name, 2: Theme author.
+#: footer.php:46
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: functions.php:54
+msgid "Primary"
+msgstr ""
+
+#: functions.php:55
+msgid "Footer"
+msgstr ""
+
+#. translators: %s: Comment Date
+#. translators: 1: list of tags. <div class="meta tags">
+#: functions.php:154 inc/template-tags.php:66
+msgid " %1$s"
+msgstr ""
+
+#: functions.php:175
+msgid "Older comments"
+msgstr ""
+
+#: functions.php:176
+msgid "Newer comments"
+msgstr ""
+
+#: functions.php:177
+msgid "Comments navigation"
+msgstr ""
+
+#: functions.php:228
+msgid "Older posts"
+msgstr ""
+
+#: functions.php:229
+msgid "Newer posts"
+msgstr ""
+
+#: functions.php:230
+msgid "Posts navigation"
+msgstr ""
+
+#: functions.php:280
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:282
+msgid "Add widgets here."
+msgstr ""
+
+#: header.php:25
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:81
+msgid "Welcome to "
+msgstr ""
+
+#: header.php:98
+msgid "Shop NOW"
+msgstr ""
+
+#: inc/custom-header.php:34
+msgid "Default Header Image"
+msgstr ""
+
+#. translators: %s: post date.
+#: inc/template-tags.php:29
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#. translators: %s: post author.
+#: inc/template-tags.php:45
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:63
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#. translators: %s: post date.
+#: inc/template-tags.php:128
+msgctxt "post date"
+msgid "%s "
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:145
+msgid ", "
+msgstr ""
+
+#. translators: 1: list of categories.
+#: inc/template-tags.php:148
+msgid "%1$s "
+msgstr ""
+
+#. translators: %s: post author.
+#: inc/template-tags.php:162
+msgctxt "post author"
+msgid "%s "
+msgstr ""
+
+#. translators: 1: comment count number
+#: inc/template-tags.php:183
+msgctxt "comment count number"
+msgid "%1$s Comment "
+msgid_plural "%1$s Comments "
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:204
+msgid "Edit Post <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: inc/woocommerce.php:419
+msgid "View your shopping cart"
+msgstr ""
+
+#. translators: %s: No products found
+#: index.php:69
+msgid "No products found"
+msgstr ""
+
+#: index.php:74
+msgid "View all products in shop"
+msgstr ""
+
+#. translators: %s: search query.
+#: search.php:20
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:23
+msgid "Nothing Found"
+msgstr ""
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-none.php:22
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:35
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:41
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:21 template-parts/content.php:65
+msgid "Pages:"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content-page.php:34
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#. translators: %s: Name of current post.
+#: template-parts/content-search.php:41 template-parts/content.php:82
+msgid "Continue reading %s"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content.php:54
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: woocommerce/cart/proceed-to-checkout-button.php:27
+msgid "Proceed to checkout"
+msgstr ""
+
+#: woocommerce/loop/pagination.php:39
+msgid "Previous"
+msgstr ""
+
+#: woocommerce/loop/pagination.php:40
+msgid "Next"
+msgstr ""
+
+#: woocommerce/loop/sale-flash.php:28
+#: woocommerce/single-product/sale-flash.php:28
+msgid "Sale!"
+msgstr ""
+
+#: woocommerce/single-product/product-image.php:43
+msgid "Awaiting product image"
+msgstr ""
+
+#: woocommerce/single-product/tabs/additional-information.php:25
+msgid "Additional information"
+msgstr ""
+
+#: woocommerce/single-product/tabs/description.php:25
+msgid "Description"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Algori Shop"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/kevinbazira/algori-shop"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"A Free Gutenberg Ready WooCommerce WordPress Theme with a clean and "
+"professional design that will be a great solution for your Modern eCommerce "
+"Shop. It's designed to help you showcase your products and sell more with "
+"just about any type of online store."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Kevin Bazira"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://kevinbazira.com/"
+msgstr ""
