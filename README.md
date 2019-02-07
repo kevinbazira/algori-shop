@@ -5,8 +5,8 @@ Contributors: Kevin Bazira(http://kevinbazira.com)
 Tags: e-commerce, blog, two-columns, right-sidebar, custom-header, custom-menu, custom-logo, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
 Requires at least: WP 4.9.6
-* Tested up to: WP 5.0
-* Stable tag: 1.0.0
+* Tested up to: WP 5.0.2
+* Stable tag: 1.0.1
 * License: GNU General Public License v2 or later
 * License URI: https://www.gnu.org/licenses/gpl-2.0.en.html
 
@@ -39,6 +39,9 @@ Algori Shop includes support for the following plugins;
 
 # Changelog 
 
+= 1.0.1 - Feb 7 2019 =
+* Added GPL compatible Default Header Image
+
 = 1.0.0 - Feb 6 2019 =
 * Initial Release
 
@@ -58,7 +61,7 @@ Algori Shop includes support for the following plugins;
 * [Owl Carousel v2.2.1](https://owlcarousel2.github.io/OwlCarousel2/) , (C) 2013-2017 David Deutsch, [MIT](https://opensource.org/licenses/MIT)
 * [retina.js](https://github.com/strues/retinajs) , (C) Steven Truesdell, [MIT](https://opensource.org/licenses/MIT)
 * [Font Awesome icons](http://fontawesome.io) , (C) Dave Gandy, [Font: SIL OFL 1.1, CSS: MIT License](http://fontawesome.io/license)
-* [Default Header Image](https://unsplash.com/photos/DvyEkhT3RUU) , (C) unsplash.com Photographer: Toa Heftiba, [CC0 License](https://creativecommons.org/publicdomain/zero/1.0/)
+* [Default Header Image](https://stocksnap.io/photo/Y2PZ47OU6Z) , (C) StockSnap.io Photographer: Toa Heftiba, [CC0 License](https://creativecommons.org/publicdomain/zero/1.0/)
 
 
 Algori Shop WooCommerce WordPress Theme, Copyright 2019 Kevin Bazira<br/>
