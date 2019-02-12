@@ -33,7 +33,7 @@ get_header(); ?>
 		 <div class="light-wrapper">
 			<div class="container inner">
 			  <div class="row">
-				<main id="main" class="site-main col-sm-8 content">
+				<main id="main" class="site-main col-sm-9 content">
 				  <div class="classic-blog">
 				  
 				  <?php
