@@ -5,7 +5,7 @@ Tags: e-commerce, blog, two-columns, right-sidebar, custom-header, custom-menu, 
 
 Requires at least: 4.9.6
 Tested up to: 5.0.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.en.html
 
@@ -35,8 +35,14 @@ Algori Shop includes support for the following plugins;
 
 == Changelog ==
 
+= 1.0.2 - Feb 12 2019 =
+* Changed main content area to col-sm-9 in both index.php and page.php
+* Changed Screenshot Image
+* Added credit info for Screenshot Small Images
+
 = 1.0.1 - Feb 7 2019 =
 * Added GPL compatible Default Header Image
+* Changed main content area to col-sm-9 in both index.php and page.php
 
 = 1.0.0 - Feb 6 2019 =
 * Initial Release
@@ -58,6 +64,9 @@ Algori Shop includes support for the following plugins;
 * [retina.js](https://github.com/strues/retinajs) , (C) Steven Truesdell, [MIT](https://opensource.org/licenses/MIT)
 * [Font Awesome icons](http://fontawesome.io) , (C) Dave Gandy, [Font: SIL OFL 1.1, CSS: MIT License](http://fontawesome.io/license)
 * [Default Header Image](https://stocksnap.io/photo/Y2PZ47OU6Z) , (C) StockSnap.io Photographer: Toa Heftiba, [CC0 License](https://creativecommons.org/publicdomain/zero/1.0/)
+* [Screenshot Small Image1](https://stocksnap.io/photo/45A4JOV6KK) , (C) StockSnap.io Photographer: Alex Blăjan, [CC0 License](https://creativecommons.org/publicdomain/zero/1.0/)
+* [Screenshot Small Image2](https://stocksnap.io/photo/L6NEASJCF7) , (C) StockSnap.io Photographer: The Lazy Artist Gallery, [CC0 License](https://creativecommons.org/publicdomain/zero/1.0/)
+* [Screenshot Small Image3](https://stocksnap.io/photo/IBTRJYDWWZ) , (C) StockSnap.io Photographer: Toni Cuenca, [CC0 License](https://creativecommons.org/publicdomain/zero/1.0/)
 
 Algori Shop WooCommerce WordPress Theme, Copyright 2019 Kevin Bazira<br/>
 Algori Shop is distributed under the terms of the GNU GPL
