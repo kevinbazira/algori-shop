@@ -6,12 +6,16 @@
  *
  * @package Algori_Shop
  */
-
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
-}
+ 
+ 
+if ( ! is_active_sidebar( 'sidebar-1' ) ):
 ?>
+	<aside id="secondary" class="widget-area <?php echo ( class_exists( 'WooCommerce' ) && is_woocommerce() ) ? '' : 'col-sm-2' ; ?> sidebar">
+	</aside><!-- #secondary -->
+<?php else: ?>
 
-<aside id="secondary" class="widget-area col-sm-3 sidebar">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</aside><!-- #secondary -->
+	<aside id="secondary" class="widget-area <?php echo ( class_exists( 'WooCommerce' ) && is_woocommerce() ) ? 'col-sm-3' : 'col-sm-4' ; ?> sidebar">
+		<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	</aside><!-- #secondary -->
+	
+<?php endif; ?>
