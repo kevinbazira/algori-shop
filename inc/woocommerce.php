@@ -193,7 +193,7 @@ if ( ! function_exists( 'algori_shop_woocommerce_wrapper_before' ) ) {
 				 <div class="light-wrapper">
 					<div class="container inner">
 					  <div class="row">
-						<main id="main" class="site-main col-sm-9 content">
+						<main id="main" class="site-main <?php echo ( ! is_active_sidebar( 'sidebar-1' ) ) ? 'col-sm-12' : 'col-sm-9' ; ?> content">
 						  
 							
 							
