@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Algori Shop 1.0.0\n"
+"Project-Id-Version: Algori Shop 1.0.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/algori-shop\n"
-"POT-Creation-Date: 2019-02-05 12:17:25+00:00\n"
+"POT-Creation-Date: 2019-03-11 13:22:58+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,18 +16,18 @@ msgstr ""
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:32
+#: 404.php:35
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: 404.php:43
+#: 404.php:46
 msgid "Most Used Categories"
 msgstr ""
 
 #. translators: %1$s: smiley
-#: 404.php:61
+#: 404.php:64
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
@@ -189,11 +189,11 @@ msgid "View your shopping cart"
 msgstr ""
 
 #. translators: %s: No products found
-#: index.php:69
+#: index.php:71
 msgid "No products found"
 msgstr ""
 
-#: index.php:74
+#: index.php:76
 msgid "View all products in shop"
 msgstr ""
 
