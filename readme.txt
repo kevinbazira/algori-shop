@@ -4,8 +4,8 @@ Contributors: Kevin Bazira
 Tags: e-commerce, blog, two-columns, right-sidebar, custom-header, custom-menu, custom-logo, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
 Requires at least: 4.9.6
-Tested up to: 5.0.2
-Stable tag: 1.0.2
+Tested up to: 5.1
+Stable tag: 1.0.3
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.en.html
 
@@ -34,6 +34,12 @@ Algori Shop includes support for the following plugins;
 3. Gutenberg plugin
 
 == Changelog ==
+
+= 1.0.3 - Mar 11 2019 =
+* Added support for centered content when sidebar is empty especially in Gutenberg
+* Updated all WooCommerce pages main content to col-sm-9 and respective sidebar col-sm-3
+* Updated all normal Blog pages main content to col-sm-8 and respective sidebar col-sm-4
+* Updated POT file in languages folder
 
 = 1.0.2 - Feb 12 2019 =
 * Changed main content area to col-sm-9 in both index.php and page.php
