@@ -25,6 +25,8 @@ get_header(); ?>
 				<div class="container inner">
 				  <div class="row">
 				  
+					<?php get_sidebar( 'left' ); ?>
+				  
 					<main id="main" class="site-main col-sm-8 content">
 						<div class="classic-blog">
 							<?php
@@ -45,7 +47,7 @@ get_header(); ?>
 					</main><!-- #main -->
 					
 					
-					<?php get_sidebar(); ?><!-- .col-sm-4 .sidebar --> 
+					<?php get_sidebar(); ?>
 					
 					
 				  </div><!-- .row --> 
