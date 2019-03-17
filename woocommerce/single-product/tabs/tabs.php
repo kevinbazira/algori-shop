@@ -35,27 +35,27 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Each tab is an array containing title, callback and priority.
  * @see woocommerce_default_product_tabs()
  */
-$tabs = apply_filters( 'woocommerce_product_tabs', array() );
+$product_tabs = apply_filters( 'woocommerce_product_tabs', array() );
 
-if ( ! empty( $tabs ) ) : ?> 
+if ( ! empty( $product_tabs ) ) : ?> 
 
 	<div class="row algori-shop-woocommerce-row">
 		<ul class="nav nav-tabs algori-shop-woocommerce-nav-tabs">
 			<?php 
 				$first_tab_title = true;
-				foreach ( $tabs as $key => $tab ) : ?>
+				foreach ( $product_tabs as $key => $product_tab ) : ?>
 				<li class="<?php echo esc_attr( $key ); ?>_tab <?php if( $first_tab_title ){ echo 'active'; $first_tab_title = false; } ?>" id="tab-title-<?php echo esc_attr( $key ); ?>" role="tab" aria-controls="tab-<?php echo esc_attr( $key ); ?>">
-					<a href="#tab-<?php echo esc_attr( $key ); ?>" data-toggle="tab"><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?></a>
+					<a href="#tab-<?php echo esc_attr( $key ); ?>" data-toggle="tab"><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $product_tab['title'] ), $key ); ?></a>
 				</li>
 			<?php endforeach; ?>
 		</ul>
 		<div class="tab-content ">
 			<?php 
 				$first_tab_content = true;
-				foreach ( $tabs as $key => $tab ) : ?>
+				foreach ( $product_tabs as $key => $product_tab ) : ?>
 				<div class="tab-pane algori-shop-woocommerce-nav-tab-pane <?php if( $first_tab_content ){ echo 'active'; $first_tab_content = false; } ?>" id="tab-<?php echo esc_attr( $key ); ?>" role="tabpanel" aria-labelledby="tab-title-<?php echo esc_attr( $key ); ?>">
 					
-					<?php if ( isset( $tab['callback'] ) ) { call_user_func( $tab['callback'], $key, $tab ); } ?>
+					<?php if ( isset( $product_tab['callback'] ) ) { call_user_func( $product_tab['callback'], $key, $product_tab ); } ?>
 				</div>
 			<?php endforeach; ?>
 		</div>
