@@ -35,6 +35,12 @@ Algori Shop includes support for the following plugins;
 
 == Changelog ==
 
+= 1.0.4 - Mar 17 2019 =
+* Changed screenshot image format to PNG
+* Updated escaping functions to avoid double escaping html elements
+* Removed support for iframes from owl.carousel.js to be compliant with WordPress theme requirements
+* Updated POT file in languages folder
+
 = 1.0.3 - Mar 11 2019 =
 * Added support for centered content when sidebar is empty especially in Gutenberg
 * Updated all WooCommerce pages main content to col-sm-9 and respective sidebar col-sm-3
