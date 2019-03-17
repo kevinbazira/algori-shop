@@ -146,12 +146,12 @@ if ( ! function_exists( 'algori_shop_setup' ) ) :
 						  <div class="image-caption">
 							<div class="info">
 							  <h2>';
-								/* translators: %s: Comment Author */
-								printf( esc_html__(' %s', 'algori-shop'), get_comment_author_link());
+								/* Comment Author */
+								comment_author_link();
 						 echo'</h2>
 							  <div class="meta">
-									<div class="date">';/* translators: %s: Comment Date */
-							 echo ' <a class="comment-permalink" href="' . esc_html( get_comment_link( $comment->comment_ID ) ) . '">'; printf( esc_html__(' %1$s', 'algori-shop'), get_comment_date( 'j F Y' ), get_comment_time() ); echo '</a>';
+									<div class="date">';/* Comment Date */
+							 echo ' <a class="comment-permalink" href="' . esc_html( get_comment_link( $comment->comment_ID ) ) . '">'; comment_date( 'j F Y' ); echo '</a>';
 							 echo ' </div>
 									&nbsp;&nbsp; | &nbsp;&nbsp;'; 
 									 comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth'])));
