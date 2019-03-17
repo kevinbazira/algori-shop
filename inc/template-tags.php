@@ -62,8 +62,8 @@ if ( ! function_exists( 'algori_shop_entry_footer' ) ) :
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'algori-shop' ) );
 			if ( $tags_list ) {
-				/* translators: 1: list of tags. <div class="meta tags">*/
-				printf( '<span class="tags-links meta tags">' . esc_html__( ' %1$s', 'algori-shop' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				/* list of tags. <div class="meta tags">*/
+				echo '<span class="tags-links meta tags">' . $tags_list . '</span>' ; // WPCS: XSS OK.
 			}
 			
 		}
@@ -123,11 +123,7 @@ if ( ! function_exists( 'algori_shop_post_date' ) ) :
 			esc_html( get_the_modified_date( 'j F Y' ) )
 		);
 
-		$posted_on = sprintf(
-			/* translators: %s: post date. */
-			esc_html_x( '%s ', 'post date', 'algori-shop' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-		);
+		$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'; /* post date. */
 
 		echo '<span class="posted-on date">' . $posted_on . '</span>'; // WPCS: XSS OK.
 
@@ -144,8 +140,8 @@ if ( ! function_exists( 'algori_shop_post_category' ) ) :
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( esc_html__( ', ', 'algori-shop' ) );
 			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( '%1$s ', 'algori-shop' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				/* list of categories. */
+				echo '<span class="cat-links">' . $categories_list . '</span>' ; // WPCS: XSS OK.
 			}
 		}
 
@@ -157,11 +153,9 @@ if ( ! function_exists( 'algori_shop_posted_author' ) ) :
 	 * Prints HTML with meta information for the current post author.
 	 */
 	function algori_shop_posted_author() {
-		$byline = sprintf(
-			/* translators: %s: post author. */
-			esc_html_x( '%s ', 'post author', 'algori-shop' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-		);
+		/* post author. */
+		$byline = '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
+		
 
 		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
