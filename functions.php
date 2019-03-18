@@ -1,13 +1,13 @@
 <?php
 /**
- * Algori Shop functions and definitions
+ * Algori Blogger functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Algori_Shop
+ * @package Algori_Blogger
  */
 
-if ( ! function_exists( 'algori_shop_setup' ) ) :
+if ( ! function_exists( 'algori_blogger_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'algori_shop_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function algori_shop_setup() {
+	function algori_blogger_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Algori Shop, use a find and replace
-		 * to change 'algori-shop' to the name of your theme in all the template files.
+		 * If you're building a theme based on Algori Blogger, use a find and replace
+		 * to change 'algori-blogger' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'algori-shop', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'algori-blogger', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -51,8 +51,8 @@ if ( ! function_exists( 'algori_shop_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'algori-shop' ),
-			'menu-2' => esc_html__( 'Footer', 'algori-shop' ),
+			'menu-1' => esc_html__( 'Primary', 'algori-blogger' ),
+			'menu-2' => esc_html__( 'Footer', 'algori-blogger' ),
 		) );
 
 		/*
@@ -100,9 +100,9 @@ if ( ! function_exists( 'algori_shop_setup' ) ) :
 		/**
 		 * Add custom link class navbar-brand to generated custom logo image link.
 		 */
-		 add_filter('get_custom_logo', 'algori_shop_change_logo_class');
+		 add_filter('get_custom_logo', 'algori_blogger_change_logo_class');
 		 
-		 function algori_shop_change_logo_class ($html){
+		 function algori_blogger_change_logo_class ($html){
 			 $html = str_replace('custom-logo-link', 'custom-logo-link navbar-brand', $html);
 			 return $html;
 		 }
@@ -110,7 +110,7 @@ if ( ! function_exists( 'algori_shop_setup' ) ) :
 		 /**
 		 * Display custom logo image if uploaded otherwise show text logo.
 		 */
-		 function algori_shop_display_logo(){
+		 function algori_blogger_display_logo(){
 			 
 			if( function_exists('the_custom_logo') ){ // check if the_custom_logo() is supported i.e WP 4.5 and above
 			
@@ -134,9 +134,9 @@ if ( ! function_exists( 'algori_shop_setup' ) ) :
 		 }
 		 
 		 /**
-		 * Display algori shop custom comments format HTML Output.
+		 * Display algori blogger custom comments format HTML Output.
 		 */
-		 function algori_shop_comments_format($comment, $args, $depth){
+		 function algori_blogger_comments_format($comment, $args, $depth){
 			  
 			  echo '<li '; comment_class('x'); echo' id="li-comment-'; comment_ID(); echo '">';
 				echo '<div class="user">';
@@ -146,12 +146,12 @@ if ( ! function_exists( 'algori_shop_setup' ) ) :
 						  <div class="image-caption">
 							<div class="info">
 							  <h2>';
-								/* Comment Author */
-								comment_author_link();
+								/* translators: %s: Comment Author */
+								printf( esc_html__(' %s', 'algori-blogger'), get_comment_author_link());
 						 echo'</h2>
 							  <div class="meta">
-									<div class="date">';/* Comment Date */
-							 echo ' <a class="comment-permalink" href="' . esc_html( get_comment_link( $comment->comment_ID ) ) . '">'; comment_date( 'j F Y' ); echo '</a>';
+									<div class="date">';/* translators: %s: Comment Date */
+							 echo ' <a class="comment-permalink" href="' . esc_html( get_comment_link( $comment->comment_ID ) ) . '">'; printf( esc_html__(' %1$s', 'algori-blogger'), get_comment_date( 'j F Y' ), get_comment_time() ); echo '</a>';
 							 echo ' </div>
 									&nbsp;&nbsp; | &nbsp;&nbsp;'; 
 									 comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth'])));
@@ -166,15 +166,15 @@ if ( ! function_exists( 'algori_shop_setup' ) ) :
 		 /**
 		 * Retrieves navigation to next/previous set of comments, when applicable.
 		 */
-		 function algori_shop_get_the_comments_navigation( $args = array() ) {
+		 function algori_blogger_get_the_comments_navigation( $args = array() ) {
 			$navigation = '';
 		 
 			// Are there comments to navigate through?
 			if ( get_comment_pages_count() > 1 ) {
 				$args = wp_parse_args( $args, array(
-					'prev_text'          => __( 'Older comments', 'algori-shop' ),
-					'next_text'          => __( 'Newer comments', 'algori-shop' ),
-					'screen_reader_text' => __( 'Comments navigation', 'algori-shop' ),
+					'prev_text'          => __( 'Older comments', 'algori-blogger' ),
+					'next_text'          => __( 'Newer comments', 'algori-blogger' ),
+					'screen_reader_text' => __( 'Comments navigation', 'algori-blogger' ),
 				) );
 		 
 				$prev_link = get_previous_comments_link( $args['prev_text'] );
@@ -200,7 +200,7 @@ if ( ! function_exists( 'algori_shop_setup' ) ) :
 		/**
 		 * Returns the navigation on single blog posts to next/previous set of posts, when applicable.
 		 */
-		function algori_shop_get_the_single_posts_navigation( ) {
+		function algori_blogger_get_the_single_posts_navigation( ) {
 			
 			if($previous_link = get_previous_post()){ // Display previous post link if it exists
 				echo '<div class="navigation pull-left">';
@@ -219,15 +219,15 @@ if ( ! function_exists( 'algori_shop_setup' ) ) :
 		/**
 		 * Returns the navigation to next/previous set of posts, when applicable.
 		 */
-		function algori_shop_get_the_posts_navigation( $args = array() ) {
+		function algori_blogger_get_the_posts_navigation( $args = array() ) {
 			$navigation = '';
 		 
 			// Don't print empty markup if there's only one page.
 			if ( $GLOBALS['wp_query']->max_num_pages > 1 ) {
 				$args = wp_parse_args( $args, array(
-					'prev_text'          => __( 'Older posts', 'algori-shop' ),
-					'next_text'          => __( 'Newer posts', 'algori-shop' ),
-					'screen_reader_text' => __( 'Posts navigation', 'algori-shop' ),
+					'prev_text'          => __( 'Older posts', 'algori-blogger' ),
+					'next_text'          => __( 'Newer posts', 'algori-blogger' ),
+					'screen_reader_text' => __( 'Posts navigation', 'algori-blogger' ),
 				) );
 		 
 				$next_link = get_previous_posts_link( $args['next_text'] );
@@ -256,7 +256,7 @@ if ( ! function_exists( 'algori_shop_setup' ) ) :
 		
 	}
 endif;
-add_action( 'after_setup_theme', 'algori_shop_setup' );
+add_action( 'after_setup_theme', 'algori_blogger_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -265,96 +265,96 @@ add_action( 'after_setup_theme', 'algori_shop_setup' );
  *
  * @global int $content_width
  */
-function algori_shop_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'algori_shop_content_width', 640 );
+function algori_blogger_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'algori_blogger_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'algori_shop_content_width', 0 );
+add_action( 'after_setup_theme', 'algori_blogger_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function algori_shop_widgets_init() {
+function algori_blogger_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'algori-shop' ),
+		'name'          => esc_html__( 'Sidebar', 'algori-blogger' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'algori-shop' ),
+		'description'   => esc_html__( 'Add widgets here.', 'algori-blogger' ),
 		'before_widget' => '<section id="%1$s" class="sidebox widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'algori_shop_widgets_init' );
+add_action( 'widgets_init', 'algori_blogger_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function algori_shop_scripts() {
+function algori_blogger_scripts() {
 
 	// Add CSS
-	wp_enqueue_style( 'algori-shop-bootstrap', get_template_directory_uri() . '/style/css/bootstrap.css', array(), '20180131', 'all' );
+	wp_enqueue_style( 'algori-blogger-bootstrap', get_template_directory_uri() . '/style/css/bootstrap.css', array(), '20180131', 'all' );
 
-	wp_enqueue_style( 'algori-shop-owl-carousel', get_template_directory_uri() . '/style/css/owl.carousel.css', array(), '20180131', 'all' );
+	wp_enqueue_style( 'algori-blogger-owl-carousel', get_template_directory_uri() . '/style/css/owl.carousel.css', array(), '20180131', 'all' );
 
-	wp_enqueue_style( 'algori-shop-prettify', get_template_directory_uri() . '/style/js/google-code-prettify/prettify.css', array(), '20180131', 'all' );
+	wp_enqueue_style( 'algori-blogger-prettify', get_template_directory_uri() . '/style/js/google-code-prettify/prettify.css', array(), '20180131', 'all' );
 
-	wp_enqueue_style( 'algori-shop-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'algori-blogger-style', get_stylesheet_uri() );
 	
-	wp_style_add_data( 'algori-shop-style', 'rtl', 'replace' );
+	wp_style_add_data( 'algori-blogger-style', 'rtl', 'replace' );
 
-	wp_enqueue_style( 'algori-shop-blue', get_template_directory_uri() . '/style/css/color/blue.css', array(), '20180131', 'all' );
+	wp_enqueue_style( 'algori-blogger-blue', get_template_directory_uri() . '/style/css/color/blue.css', array(), '20180131', 'all' );
 
 	// Add Fonts
-	wp_enqueue_style( 'algori-shop-google-fonts', 'http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900' );
+	wp_enqueue_style( 'algori-blogger-google-fonts', 'http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900' );
 	
 	wp_enqueue_style( 'algori-font-awesome-fonts', get_template_directory_uri() . '/style/css/font-awesome.css', array(), '20180131', 'all' );
 	
 	//Add JavaScript
 	wp_enqueue_script( 'jquery'); // load WP core-bundled jQuery
 	
-	wp_add_inline_script( 'jquery-core', '$ = jQuery;' );  // avoid '$ and jquery' conflict caused by WP core-bundled jQuery since it's old it uses 'jquery' yet algori-shop scripts below use '$'
+	wp_add_inline_script( 'jquery-core', '$ = jQuery;' );  // avoid '$ and jquery' conflict caused by WP core-bundled jQuery since it's old it uses 'jquery' yet algori-blogger scripts below use '$'
 	
-	wp_enqueue_script( 'algori-shop-bootstrap-min', get_template_directory_uri() . '/style/js/bootstrap.min.js', array(), '20180131', true );
+	wp_enqueue_script( 'algori-blogger-bootstrap-min', get_template_directory_uri() . '/style/js/bootstrap.min.js', array(), '20180131', true );
 
-	wp_enqueue_script( 'algori-shop-twitter-bootstrap-hover-dropdown-min', get_template_directory_uri() . '/style/js/bootstrap-hover-dropdown.min.js', array(), '20180131', true );
+	wp_enqueue_script( 'algori-blogger-twitter-bootstrap-hover-dropdown-min', get_template_directory_uri() . '/style/js/bootstrap-hover-dropdown.min.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-shop-isotope-min', get_template_directory_uri() . '/style/js/jquery.isotope.min.js', array(), '20180131', true );
+	wp_enqueue_script( 'algori-blogger-isotope-min', get_template_directory_uri() . '/style/js/jquery.isotope.min.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-shop-jquery-easytabs-min', get_template_directory_uri() . '/style/js/jquery.easytabs.min.js', array(), '20180131', true );
+	wp_enqueue_script( 'algori-blogger-jquery-easytabs-min', get_template_directory_uri() . '/style/js/jquery.easytabs.min.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-shop-owl-carousel-min', get_template_directory_uri() . '/style/js/owl.carousel.min.js', array(), '20180131', true );
+	wp_enqueue_script( 'algori-blogger-owl-carousel-min', get_template_directory_uri() . '/style/js/owl.carousel.min.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-shop-jquery-fitvids', get_template_directory_uri() . '/style/js/jquery.fitvids.js', array(), '20180131', true );
+	wp_enqueue_script( 'algori-blogger-jquery-fitvids', get_template_directory_uri() . '/style/js/jquery.fitvids.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-shop-jquery-sticky', get_template_directory_uri() . '/style/js/jquery.sticky.js', array(), '20180131', true );
+	wp_enqueue_script( 'algori-blogger-jquery-sticky', get_template_directory_uri() . '/style/js/jquery.sticky.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-shop-prettify', get_template_directory_uri() . '/style/js/google-code-prettify/prettify.min.js', array(), '20180131', true );
+	wp_enqueue_script( 'algori-blogger-prettify', get_template_directory_uri() . '/style/js/google-code-prettify/prettify.min.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-shop-jquery-slickforms', get_template_directory_uri() . '/style/js/jquery.slickforms.js', array(), '20180131', true );
+	wp_enqueue_script( 'algori-blogger-jquery-slickforms', get_template_directory_uri() . '/style/js/jquery.slickforms.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-shop-retina', get_template_directory_uri() . '/style/js/retina.js', array(), '20180131', true );
+	wp_enqueue_script( 'algori-blogger-retina', get_template_directory_uri() . '/style/js/retina.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-shop-scripts', get_template_directory_uri() . '/style/js/scripts.js', array(), '20180427', true );
+	wp_enqueue_script( 'algori-blogger-scripts', get_template_directory_uri() . '/style/js/scripts.js', array(), '20180427', true );
 
-	wp_enqueue_script( 'algori-shop-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'algori-blogger-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'algori-shop-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'algori-blogger-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'algori_shop_scripts' );
+add_action( 'wp_enqueue_scripts', 'algori_blogger_scripts' );
 
 /**
  * Enqueue fonts for gutenberg.
  */
-function algori_shop_block_editor_fonts(){
-	wp_enqueue_style( 'algori-shop-block-editor-fonts', 'http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900' );
+function algori_blogger_block_editor_fonts(){
+	wp_enqueue_style( 'algori-blogger-block-editor-fonts', 'http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900' );
 }
-add_action( 'enqueue_block_editor_assets', 'algori_shop_block_editor_fonts' );
+add_action( 'enqueue_block_editor_assets', 'algori_blogger_block_editor_fonts' );
 
 /**
  * Implement the Custom Header feature.
@@ -384,24 +384,17 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /**
- * Load WooCommerce compatibility file.
+ * Customize Algori Blogger elipsis at the end of excerpts from " [...]" to just "..." .
  */
-if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/woocommerce.php';
-}
-
-/**
- * Customize Algori Shop elipsis at the end of excerpts from " [...]" to just "..." .
- */
- function algori_shop_excerpt_more() {
+ function algori_blogger_excerpt_more() {
 	 return " ...";
  }
- add_filter('excerpt_more', 'algori_shop_excerpt_more');
+ add_filter('excerpt_more', 'algori_blogger_excerpt_more');
 
  /**
- * Customize Algori Shop Search form input and submit button .
+ * Customize Algori Blogger Search form input and submit button .
  */
- function algori_shop_get_search_form($form) {
+ function algori_blogger_get_search_form($form) {
 	 
 	 $form = str_replace (
 			'<label>',
@@ -417,12 +410,12 @@ if ( class_exists( 'WooCommerce' ) ) {
 	 
 	 return $form;
  }
- add_filter('get_search_form', 'algori_shop_get_search_form');
+ add_filter('get_search_form', 'algori_blogger_get_search_form');
  
 /**
- * Algori Shop walker nav class.
+ * Algori Blogger walker nav class.
  */
-class Algori_Shop_Walker_Nav_Primary extends Walker_Nav_menu {
+class Algori_Blogger_Walker_Nav_Primary extends Walker_Nav_menu {
 	
 	function start_lvl( &$output, $depth = 0, $args = array() ){ //ul
 		$indent = str_repeat("\t",$depth);
