@@ -1,26 +1,26 @@
-=== Algori Blogger ===
+=== Algori Shop ===
 
 Contributors: Kevin Bazira
-Tags: blog, two-columns, right-sidebar, custom-header, custom-menu, custom-logo, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: e-commerce, blog, two-columns, right-sidebar, custom-header, custom-menu, custom-logo, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
-Requires at least: WP 4.9.6
-Tested up to: WP 5.1
-Stable tag: 1.1.1
+Requires at least: 4.9.6
+Tested up to: 5.1
+Stable tag: 1.0.3
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.en.html
 
-Algori Blogger is a WordPress Theme designed for Modern Personal Blogs.
+Algori Shop is a Gutenberg Ready WooCommerce Theme designed for Modern eCommerce Shops.
 
 == Description ==
 
-A Gutenberg Ready Free Modern Personal Blog WordPress Theme with a clean and professional design that will be a great solution for sharing your creative vision, spreading your ideas, and creating a resource for others.
+A Free Gutenberg Ready WooCommerce WordPress Theme with a clean and professional design that will be a great solution for your Modern eCommerce Shop. It's designed to help you showcase your products and sell more with just about any type of online store.
 
 == Installation ==
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Algori Blogger in the search form and press the 'Enter' key on your keyboard.
+2. Type in Algori Shop in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
-4. Go to http://kevinbazira.com/blog/article/algori-blogger-documentation for a guide on how to customize this theme.
+4. Go to http://kevinbazira.com/blog/article/algori-shop-gutenberg-ready-woocommerce-wordpress-theme for a guide on how to customize this theme.
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 6. Done :)
 
@@ -28,52 +28,40 @@ A Gutenberg Ready Free Modern Personal Blog WordPress Theme with a clean and pro
 
 = Does this theme support any plugins? =
 
-Algori Blogger includes support for the following plugins;
+Algori Shop includes support for the following plugins;
 1. Infinite Scroll in Jetpack
-2. Gutenberg plugin
+2. WooCommerce plugin
+3. Gutenberg plugin
 
 == Changelog ==
 
-= 1.1.1 - Mar 07 2019 =
+= 1.0.5 - Mar 18 2019 =
+* Removed $ manipulation and added 'jquery' in the dependencies param for all scripts that need jQuery
+* Fixed all the added scripts to use jQuery instead of $
+* Updated POT file in languages folder
+
+= 1.0.4 - Mar 17 2019 =
+* Changed screenshot image format to PNG
+* Updated escaping functions to avoid double escaping html elements
+* Removed support for iframes from owl.carousel.js to be compliant with WordPress theme requirements
+* Updated POT file in languages folder
+
+= 1.0.3 - Mar 11 2019 =
 * Added support for centered content when sidebar is empty especially in Gutenberg
-* Added mobile support for hero title and description
+* Updated all WooCommerce pages main content to col-sm-9 and respective sidebar col-sm-3
+* Updated all normal Blog pages main content to col-sm-8 and respective sidebar col-sm-4
 * Updated POT file in languages folder
 
-= 1.1.0 - Feb 06 2019 =
-* Updated style-rtl.css to match style.css
-* Added index.php page-title wrapper to show on !is_front_page()
-* Fixed page.php and archive.php page-title wrapper to show on !is_front_page()
-* Updated POT file in languages folder
+= 1.0.2 - Feb 12 2019 =
+* Changed main content area to col-sm-9 in both index.php and page.php
+* Changed Screenshot Image
+* Added credit info for Screenshot Small Images
 
-= 1.0.9 - Jan 25 2019 =
-* Added theme support for Gutenberg to functions.php
-* Added front-end Gutenberg block styles to styles.css and style-rtl.css
-* Added back-end Gutenberg block styles to editor-styles.css
-* Changed line-height from 25px to 1.8 in both styles.css and editor-styles.css
-* Added copyright information in readme
-* Updated POT file in languages folder
+= 1.0.1 - Feb 7 2019 =
+* Added GPL compatible Default Header Image
+* Changed main content area to col-sm-9 in both index.php and page.php
 
-= 1.0.8 - April 28 2018 =
-* Added WP core-bundled jQuery
-* Updated readme file to keep credits and license info of all third party resources (like scripts, styles, libraries, images, etc)
-* Removed FancyBox v2.1.5
-* Removed Revolution Slider because it's not GPL compatible.
-* Added all unminified versions of the minified files being used.
-* Updated POT file in languages folder.
-
-= 1.0.7 - April 17 2018 =
-* Fixed Sidebar Styling
-
-= 1.0.6 - Feb 26 2018 =
-* Added Default Header Image
-
-= 1.0.5 - Feb 23 2018 =
-* Added Support for RTL Mode
-
-= 1.0.4 - Feb 20 2018 =
-* Added Editor Styles
-
-= 1.0.0 - Feb 14 2018 =
+= 1.0.0 - Feb 6 2019 =
 * Initial Release
 
 == Credits ==
@@ -92,7 +80,10 @@ Algori Blogger includes support for the following plugins;
 * [Owl Carousel v2.2.1](https://owlcarousel2.github.io/OwlCarousel2/) , (C) 2013-2017 David Deutsch, [MIT](https://opensource.org/licenses/MIT)
 * [retina.js](https://github.com/strues/retinajs) , (C) Steven Truesdell, [MIT](https://opensource.org/licenses/MIT)
 * [Font Awesome icons](http://fontawesome.io) , (C) Dave Gandy, [Font: SIL OFL 1.1, CSS: MIT License](http://fontawesome.io/license)
-* [Default Header Image](https://stocksnap.io/photo/5AQ9OI606F) , (C) StockSnap.io Photographer: Toa Heftiba, [CC0 License](https://creativecommons.org/publicdomain/zero/1.0/)
+* [Default Header Image](https://stocksnap.io/photo/Y2PZ47OU6Z) , (C) StockSnap.io Photographer: Toa Heftiba, [CC0 License](https://creativecommons.org/publicdomain/zero/1.0/)
+* [Screenshot Small Image1](https://stocksnap.io/photo/45A4JOV6KK) , (C) StockSnap.io Photographer: Alex Blăjan, [CC0 License](https://creativecommons.org/publicdomain/zero/1.0/)
+* [Screenshot Small Image2](https://stocksnap.io/photo/L6NEASJCF7) , (C) StockSnap.io Photographer: The Lazy Artist Gallery, [CC0 License](https://creativecommons.org/publicdomain/zero/1.0/)
+* [Screenshot Small Image3](https://stocksnap.io/photo/IBTRJYDWWZ) , (C) StockSnap.io Photographer: Toni Cuenca, [CC0 License](https://creativecommons.org/publicdomain/zero/1.0/)
 
-Algori Blogger WordPress Theme, Copyright 2019 Kevin Bazira<br/>
-Algori Blogger is distributed under the terms of the GNU GPL
+Algori Shop WooCommerce WordPress Theme, Copyright 2019 Kevin Bazira<br/>
+Algori Shop is distributed under the terms of the GNU GPL
