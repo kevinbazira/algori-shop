@@ -1,15 +1,16 @@
 /*!
 
-Theme Name: Algori Shop
-Theme URI: https://github.com/kevinbazira/algori-shop
+Theme Name: Algori Blogger
+Theme URI: https://github.com/kevinbazira/algori-blogger
 Author: Kevin Bazira  
 Author URI: http://kevinbazira.com/
-Description: A Free Gutenberg Ready WooCommerce WordPress Theme with a clean and professional design that will be a great solution for your Modern eCommerce Shop. It's designed to help you showcase your products and sell more with just about any type of online store.
-Version: 1.0.4
+Description: A Gutenberg Ready Free Modern Personal Blog WordPress Theme with a clean and professional design that will be a great solution for sharing your creative vision, spreading your ideas, and creating a resource for others.
+Version: 1.1.1
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.en.html
-Text Domain: algori-shop
-Tags: e-commerce, blog, one-column, two-columns, right-sidebar, custom-header, custom-menu, custom-logo, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+Text Domain: algori-blogger
+Tags: blog, one-column, two-columns, right-sidebar, custom-header, custom-menu, custom-logo, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun!
@@ -256,32 +257,6 @@ h1.post-title {
     background: #090909;
     color: #cacaca;
 }
-.gradient-wrapper {
-    background: #2986BE;
-	background-image: linear-gradient(-150deg, #00C1B6 0%, #136EB5 97%);
-    background-size: cover;
-    background-position: center bottom;
-    color: #ffffff;
-}
-.gradient-wrapper h1,
-.gradient-wrapper h2,
-.gradient-wrapper h3,
-.gradient-wrapper h4,
-.gradient-wrapper h5,
-.gradient-wrapper h6 {
-    color: #ffffff;
-}
-.gradient-wrapper .navigation > a,
-.gradient-wrapper .navigation > a:visited {
-    color: #ffffff;
-	border-color: #ffffff;
-}
-.gradient-wrapper .navigation > a:hover,
-.gradient-wrapper .navigation > a:active,
-.gradient-wrapper .navigation > a:focus {
-    color: #000000;
-	border-color: #000000;
-}
 .black-wrapper .lead {
     color: #cacaca
 }
@@ -444,11 +419,6 @@ dfn, cite, em, address, i {
 code, kbd, tt, var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	font-size: 15px;
-	display: inline-block;
-	-ms-word-wrap: break-word;
-	word-wrap: break-word;
-	word-break: break-all;  
-	white-space:normal;
 }
 
 abbr, acronym {
@@ -1036,8 +1006,7 @@ hr {
 /*-----------------------------------------------------------------------------------*/
 .btn,
 .parallax .btn-submit,
-.btn-submit,
-button, input[type="button"], input[type="reset"], input[type="submit"] {
+.btn-submit {
     color: #fff !important;
     background: #3f8dbf;
     margin-bottom: 10px;
@@ -1051,8 +1020,8 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     -webkit-transition: all 200ms ease-in;
     -o-transition: all 200ms ease-in;
     -moz-transition: all 200ms ease-in;
-    -webkit-border-radius: 30px;
-    border-radius: 30px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -1370,7 +1339,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     border-color: #507faa;
     color: #507faa;
 }
-.social .icon-s-shop {
+.social .icon-s-blogger {
     border-color: #fd893f;
     color: #fd893f;
 }
@@ -1485,7 +1454,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 .social a:hover .icon-s-digg {
     background-color: #507faa
 }
-.social a:hover .icon-s-shop {
+.social a:hover .icon-s-blogger {
     background-color: #fd893f
 }
 .social a:hover .icon-s-klout {
@@ -1685,6 +1654,9 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 }
 .hero-info{
   flex: 0 0 auto;
+  width:50%
+}
+.hero-info{
   width:100%;
   padding:15% 10% 0 10%;
   text-align:center;
@@ -1700,6 +1672,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   0% { transform:scale(1)}
   50% { transform:scale(1.2)}
 }
+
 
 @media all and (max-width: 480px) { 
 	.hero-description {
@@ -2631,8 +2604,8 @@ a.more:after {
     text-transform: uppercase;
     padding: 9px 15px;
     border: 2px solid #9b9b9b;
-    -webkit-border-radius: 30px;
-    border-radius: 30px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
 }
 .pagination ul > li > a:hover,
 .pagination ul > li > a:focus,
@@ -2654,8 +2627,8 @@ a.more:after {
     text-transform: uppercase;
     padding: 5px 10px 4px;
     border: 2px solid #9b9b9b;
-    -webkit-border-radius: 30px;
-    border-radius: 30px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
     display: inline-block;
 }
 .navigation a:hover {
@@ -3117,8 +3090,8 @@ input[type="color"],
     -moz-box-shadow: none;
     box-shadow: none;
     background: #FFF;
-    -webkit-border-radius: 30px;
-    border-radius: 30px;
+    -webkit-border-radius: 0;
+    border-radius: 0;
     -webkit-transition: all 200ms ease-in;
     -o-transition: all 200ms ease-in;
     -moz-transition: all 200ms ease-in;
@@ -3346,15 +3319,15 @@ input:focus:-ms-input-placeholder {
     text-decoration: none;
     background: rgba(0,0,0,0.3);
     color: #f7f7f7;
-    -webkit-border-radius: 30px;
-    border-radius: 30px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
     -webkit-transition: background 200ms linear;
     -moz-transition: background 200ms linear;
     transition: background 200ms linear;
     -webkit-backface-visibility: hidden;
     line-height: 1;
     font-size: 20px;
-    padding: 9px 15px;
+    padding: 9px 10px 10px 10px;
 }
 #scrollUp:hover {
     background: rgba(0,0,0,0.5)
@@ -3906,7 +3879,7 @@ object {
 	}
 	.items.col4 li {
 	    width: 279px;
-	    margin-left: 9px;
+	    margin-left: 18px;
 	    margin-bottom: 18px;
 	}
 	.items.col3 {
@@ -4515,6 +4488,3 @@ object {
 .parallax .wp-block-button__link-submit:hover {
     filter: brightness(120%);
 }
-
-
-
