@@ -5,9 +5,9 @@ Tags: e-commerce, blog, two-columns, right-sidebar, custom-header, custom-menu, 
 
 Requires at least: 4.9.6
 Tested up to: 5.1
-Stable tag: 1.0.3
-License: GNU General Public License v2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.en.html
+Stable tag: 1.0.6
+License: GNU General Public License v3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
 Algori Shop is a Gutenberg Ready WooCommerce Theme designed for Modern eCommerce Shops.
 
@@ -34,6 +34,10 @@ Algori Shop includes support for the following plugins;
 3. Gutenberg plugin
 
 == Changelog ==
+
+= 1.0.6 - Mar 22 2019 =
+* Removed theme-slug prefixes from third party assets 
+* Changed theme license from GPLv2 to GPLv3 to support Isotope
 
 = 1.0.5 - Mar 18 2019 =
 * Removed $ manipulation and added 'jquery' in the dependencies param for all scripts that need jQuery
