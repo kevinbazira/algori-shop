@@ -294,11 +294,11 @@ add_action( 'widgets_init', 'algori_shop_widgets_init' );
 function algori_shop_scripts() {
 
 	// Add CSS
-	wp_enqueue_style( 'algori-shop-bootstrap', get_template_directory_uri() . '/style/css/bootstrap.css', array(), '20180131', 'all' );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/style/css/bootstrap.css', array(), '20180131', 'all' );
 
-	wp_enqueue_style( 'algori-shop-owl-carousel', get_template_directory_uri() . '/style/css/owl.carousel.css', array(), '20180131', 'all' );
+	wp_enqueue_style( 'owl-carousel', get_template_directory_uri() . '/style/css/owl.carousel.css', array(), '20180131', 'all' );
 
-	wp_enqueue_style( 'algori-shop-prettify', get_template_directory_uri() . '/style/js/google-code-prettify/prettify.css', array(), '20180131', 'all' );
+	wp_enqueue_style( 'prettify', get_template_directory_uri() . '/style/js/google-code-prettify/prettify.css', array(), '20180131', 'all' );
 
 	wp_enqueue_style( 'algori-shop-style', get_stylesheet_uri() );
 	
@@ -309,30 +309,30 @@ function algori_shop_scripts() {
 	// Add Fonts
 	wp_enqueue_style( 'algori-shop-google-fonts', 'http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900' );
 	
-	wp_enqueue_style( 'algori-font-awesome-fonts', get_template_directory_uri() . '/style/css/font-awesome.css', array(), '20180131', 'all' );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/style/css/font-awesome.css', array(), '20180131', 'all' );
 	
 	//Add JavaScript
-	wp_enqueue_script( 'algori-shop-bootstrap-min', get_template_directory_uri() . '/style/js/bootstrap.min.js', array( 'jquery' ), '20180131', true );
+	wp_enqueue_script( 'bootstrap-min', get_template_directory_uri() . '/style/js/bootstrap.min.js', array( 'jquery' ), '20180131', true );
 
-	wp_enqueue_script( 'algori-shop-twitter-bootstrap-hover-dropdown-min', get_template_directory_uri() . '/style/js/bootstrap-hover-dropdown.min.js', array( 'jquery' ), '20180131', true );
+	wp_enqueue_script( 'bootstrap-hover-dropdown-min', get_template_directory_uri() . '/style/js/bootstrap-hover-dropdown.min.js', array( 'jquery' ), '20180131', true );
 	
-	wp_enqueue_script( 'algori-shop-isotope-min', get_template_directory_uri() . '/style/js/jquery.isotope.min.js', array( 'jquery' ), '20180131', true );
+	wp_enqueue_script( 'isotope-min', get_template_directory_uri() . '/style/js/jquery.isotope.min.js', array( 'jquery' ), '20180131', true );
 	
-	wp_enqueue_script( 'algori-shop-jquery-easytabs-min', get_template_directory_uri() . '/style/js/jquery.easytabs.min.js', array( 'jquery' ), '20180131', true );
+	wp_enqueue_script( 'jquery-easytabs-min', get_template_directory_uri() . '/style/js/jquery.easytabs.min.js', array( 'jquery' ), '20180131', true );
 	
-	wp_enqueue_script( 'algori-shop-owl-carousel-min', get_template_directory_uri() . '/style/js/owl.carousel.min.js', array( 'jquery' ), '20180131', true );
+	wp_enqueue_script( 'owl-carousel-min', get_template_directory_uri() . '/style/js/owl.carousel.min.js', array( 'jquery' ), '20180131', true );
 	
-	wp_enqueue_script( 'algori-shop-jquery-fitvids', get_template_directory_uri() . '/style/js/jquery.fitvids.js', array( 'jquery' ), '20180131', true );
+	wp_enqueue_script( 'jquery-fitvids', get_template_directory_uri() . '/style/js/jquery.fitvids.js', array( 'jquery' ), '20180131', true );
 	
-	wp_enqueue_script( 'algori-shop-jquery-sticky', get_template_directory_uri() . '/style/js/jquery.sticky.js', array( 'jquery' ), '20180131', true );
+	wp_enqueue_script( 'jquery-sticky', get_template_directory_uri() . '/style/js/jquery.sticky.js', array( 'jquery' ), '20180131', true );
 	
-	wp_enqueue_script( 'algori-shop-prettify', get_template_directory_uri() . '/style/js/google-code-prettify/prettify.min.js', array(), '20180131', true );
+	wp_enqueue_script( 'prettify', get_template_directory_uri() . '/style/js/google-code-prettify/prettify.min.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-shop-jquery-slickforms', get_template_directory_uri() . '/style/js/jquery.slickforms.js', array( 'jquery' ), '20180131', true );
+	wp_enqueue_script( 'jquery-slickforms', get_template_directory_uri() . '/style/js/jquery.slickforms.js', array( 'jquery' ), '20180131', true );
 	
-	wp_enqueue_script( 'algori-shop-retina', get_template_directory_uri() . '/style/js/retina.js', array(), '20190318', true );
+	wp_enqueue_script( 'retina', get_template_directory_uri() . '/style/js/retina.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-shop-scripts', get_template_directory_uri() . '/style/js/scripts.js', array( 'jquery' ), '20180427', true );
+	wp_enqueue_script( 'algori-shop-scripts', get_template_directory_uri() . '/style/js/scripts.js', array( 'jquery' ), '20190318', true );
 
 	wp_enqueue_script( 'algori-shop-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
