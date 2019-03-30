@@ -5,7 +5,7 @@ Tags: e-commerce, blog, two-columns, right-sidebar, custom-header, custom-menu, 
 
 Requires at least: 4.9.6
 Tested up to: 5.1
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -35,6 +35,12 @@ Algori Shop includes support for the following plugins;
 
 == Changelog ==
 
+= 1.0.7 - Mar 30 2019 =
+* Added admin check to avoid affecting admin dashboard 'excerpt_more'
+* Updated escaping for html accessibility attributes
+* Removed unused functions from template-tags.php
+* Updated POT file in languages folder
+
 = 1.0.6 - Mar 22 2019 =
 * Removed theme-slug prefixes from third party assets 
 * Changed theme license from GPLv2 to GPLv3 to support Isotope
@@ -45,7 +51,7 @@ Algori Shop includes support for the following plugins;
 * Updated POT file in languages folder
 
 = 1.0.4 - Mar 17 2019 =
-* Changed screenshot image format to PNG
+* Changed screenshot image format from JPG to PNG
 * Updated escaping functions to avoid double escaping html elements
 * Removed support for iframes from owl.carousel.js to be compliant with WordPress theme requirements
 * Updated POT file in languages folder
