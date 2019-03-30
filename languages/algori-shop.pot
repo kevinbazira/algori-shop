@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Algori Shop 1.0.6\n"
+"Project-Id-Version: Algori Shop 1.0.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/algori-shop\n"
-"POT-Creation-Date: 2019-03-22 06:59:00+00:00\n"
+"POT-Creation-Date: 2019-03-30 14:50:33+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -79,35 +79,47 @@ msgstr ""
 msgid "Footer"
 msgstr ""
 
-#: functions.php:175
-msgid "Older comments"
+#: functions.php:160
+msgid "Your comment is awaiting moderation."
 msgstr ""
 
 #: functions.php:176
-msgid "Newer comments"
+msgid "Older comments"
 msgstr ""
 
 #: functions.php:177
+msgid "Newer comments"
+msgstr ""
+
+#: functions.php:178
 msgid "Comments navigation"
 msgstr ""
 
-#: functions.php:228
+#: functions.php:208 woocommerce/loop/pagination.php:39
+msgid "Previous"
+msgstr ""
+
+#: functions.php:215 woocommerce/loop/pagination.php:40
+msgid "Next"
+msgstr ""
+
+#: functions.php:231
 msgid "Older posts"
 msgstr ""
 
-#: functions.php:229
+#: functions.php:232
 msgid "Newer posts"
 msgstr ""
 
-#: functions.php:230
+#: functions.php:233
 msgid "Posts navigation"
 msgstr ""
 
-#: functions.php:280
+#: functions.php:283
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:282
+#: functions.php:285
 msgid "Add widgets here."
 msgstr ""
 
@@ -127,31 +139,19 @@ msgstr ""
 msgid "Default Header Image"
 msgstr ""
 
-#. translators: %s: post date.
-#: inc/template-tags.php:29
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr ""
-
-#. translators: %s: post author.
-#: inc/template-tags.php:45
-msgctxt "post author"
-msgid "by %s"
-msgstr ""
-
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:63
+#: inc/template-tags.php:19
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:141
+#: inc/template-tags.php:97
 msgid ", "
 msgstr ""
 
 #. translators: 1: comment count number
-#: inc/template-tags.php:177
+#: inc/template-tags.php:133
 msgctxt "comment count number"
 msgid "%1$s Comment "
 msgid_plural "%1$s Comments "
@@ -159,7 +159,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:198
+#: inc/template-tags.php:154
 msgid "Edit Post <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
@@ -168,11 +168,11 @@ msgid "View your shopping cart"
 msgstr ""
 
 #. translators: %s: No products found
-#: index.php:71
+#: index.php:72
 msgid "No products found"
 msgstr ""
 
-#: index.php:76
+#: index.php:77
 msgid "View all products in shop"
 msgstr ""
 
@@ -224,14 +224,6 @@ msgstr ""
 
 #: woocommerce/cart/proceed-to-checkout-button.php:27
 msgid "Proceed to checkout"
-msgstr ""
-
-#: woocommerce/loop/pagination.php:39
-msgid "Previous"
-msgstr ""
-
-#: woocommerce/loop/pagination.php:40
-msgid "Next"
 msgstr ""
 
 #: woocommerce/loop/sale-flash.php:28
