@@ -54,6 +54,7 @@ get_header(); ?>
 							<?php
 							
 							if ( is_home() && is_front_page() && class_exists( 'WooCommerce' ) ):
+								$shop_page_url = get_permalink( woocommerce_get_page_id( 'shop' ) );
 							?>
 								<ul class="products">
 									<?php
@@ -73,7 +74,7 @@ get_header(); ?>
 										wp_reset_postdata();
 									?>
 								</ul><!--/.products-->
-								<a href="shop" class="button btn btn-block" aria-label="<?php esc_html_e( 'View all products in shop', 'algori-shop' ); ?>"><?php esc_html_e( 'View all products in shop', 'algori-shop' ); ?></a>
+								<a href="<?php esc_url( $shop_page_url ); ?>" class="button btn btn-block" aria-label="<?php esc_attr_e( 'View all products in shop', 'algori-shop' ); ?>"><?php esc_html_e( 'View all products in shop', 'algori-shop' ); ?></a>
 							<?php
 							else:
 									if ( have_posts() ) :
