@@ -390,6 +390,11 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 
 /**
+ * Load recommended plugins with TGMPA.
+ */
+require get_parent_theme_file_path( '/inc/recommended-plugins.php' );
+
+/**
  * Customize Algori Shop elipsis at the end of excerpts from " [...]" to just "..." .
  */
  function algori_shop_excerpt_more( $more ) {
@@ -478,3 +483,4 @@ class Algori_Shop_Walker_Nav_Primary extends Walker_Nav_menu {
 	}
 	
 }
+
