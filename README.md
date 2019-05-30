@@ -6,7 +6,7 @@ Tags: e-commerce, blog, two-columns, right-sidebar, custom-header, custom-menu, 
 
 Requires at least: WP 4.9.6
 * Tested up to: WP 5.1
-* Stable tag: 1.0.8
+* Stable tag: 1.0.9
 * License: GNU General Public License v3 or later
 * License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -38,6 +38,13 @@ Algori Shop includes support for the following plugins;
 * Gutenberg plugin
 
 # Changelog 
+
+= 1.0.9 - May 30 2019 =
+* Fixed CSS for native WooCommerce Widgets to blend well with the Algori Shop design
+* Added Algori Shop documentation link to the customizer
+* Added customizer css for custom controls like the algori-shop-documentation-link
+* Added recommended plugins using the TGMPA library
+* Updated POT file in languages folder
 
 = 1.0.8 - May 10 2019 =
 * Fixed readme.txt issues and passed WordPress Readme Validator
