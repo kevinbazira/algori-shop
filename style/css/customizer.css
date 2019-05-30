@@ -1,0 +1,17 @@
+
+#algori-shop-documentation-link {
+	width: 100%;
+	text-align: center;
+	background: none #5cb85c;
+    border-color: #4cae4c;
+	box-shadow: none;
+    text-shadow: none;
+}
+
+#algori-shop-documentation-link:hover,
+#algori-shop-documentation-link:focus {
+	background: none #449d44;
+	border-color: #398439;
+	box-shadow: none;
+	color: #fff;
+}
