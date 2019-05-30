@@ -543,12 +543,14 @@ p.no-comments {
 }
 
 .widget_price_filter .price_slider_amount {
-	text-align: right;
-	line-height: 2.4em;
+	text-align: left;
+    line-height: 2.5em;
+    font-size: 14px;
 }
 
 .widget_price_filter .price_slider_amount .button {
 	float: left;
+	line-height: normal;
 }
 
 .widget_price_filter .ui-slider {
@@ -597,6 +599,16 @@ p.no-comments {
 .widget_price_filter .ui-slider-horizontal .ui-slider-range {
 	height: 100%;
 }
+
+.widget_recently_viewed_products > ul,
+.widget_recent_reviews > ul,
+.widget_top_rated_products > ul,
+.widget_rating_filter > ul {
+	list-style: none; /* Remove list bullets */
+	padding: 0;
+	margin: 0;
+}
+
 
 /* Header Cart Link */
 .algori-shop-woocommerce-header-cart-link {
