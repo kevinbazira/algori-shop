@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Algori Shop 1.0.9\n"
+"Project-Id-Version: Algori Shop 1.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/algori-shop\n"
-"POT-Creation-Date: 2019-05-30 08:53:28+00:00\n"
+"POT-Creation-Date: 2019-06-02 13:38:18+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -129,10 +129,6 @@ msgstr ""
 
 #: header.php:81
 msgid "Welcome to "
-msgstr ""
-
-#: header.php:98
-msgid "Shop NOW"
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:327
@@ -524,6 +520,34 @@ msgstr ""
 
 #: inc/customizer.php:56
 msgid "View Algori Shop Documentation."
+msgstr ""
+
+#: inc/customizer.php:70
+msgid "Theme Options"
+msgstr ""
+
+#: inc/customizer.php:71
+msgid "Adjust Algori Shop Theme Options."
+msgstr ""
+
+#: inc/customizer.php:77
+msgid "CTA Button"
+msgstr ""
+
+#: inc/customizer.php:78
+msgid "Edit call-to-action button text and link."
+msgstr ""
+
+#: inc/customizer.php:96
+msgid "CTA Button URL"
+msgstr ""
+
+#: inc/customizer.php:106
+msgid "Shop NOW"
+msgstr ""
+
+#: inc/customizer.php:112
+msgid "CTA Button Text"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
