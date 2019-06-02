@@ -5,8 +5,8 @@ Contributors: [Kevin Bazira](http://kevinbazira.com)
 Tags: e-commerce, blog, two-columns, right-sidebar, custom-header, custom-menu, custom-logo, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
 Requires at least: WP 4.9.6
-* Tested up to: WP 5.1
-* Stable tag: 1.0.9
+* Tested up to: WP 5.2.1
+* Stable tag: 1.1.0
 * License: GNU General Public License v3 or later
 * License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -38,6 +38,12 @@ Algori Shop includes support for the following plugins;
 * Gutenberg plugin
 
 # Changelog 
+
+= 1.1.0 - June 02 2019 =
+* Added Customizer theme options for editing CTA button text and link
+* Updated WooCommerce theme templates to support WooCommerce plugin 3.6.4
+* Fixed WooCommerce Cart Widget CSS to blend well with the Algori Shop design
+* Updated POT file in languages folder
 
 = 1.0.9 - May 30 2019 =
 * Fixed CSS for native WooCommerce Widgets to blend well with the Algori Shop design
