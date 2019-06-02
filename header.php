@@ -95,7 +95,16 @@
 			<?php endif; ?>
 			
 			<div class="hero-btn">
-			  <a href="shop" class="btn btn-large"><?php esc_html_e( 'Shop NOW', 'algori-shop' ); ?></a>
+				<?php
+					// Get CTA Button customizer settings
+					// I type casted them to (string) because WP was returning false positives on initial load which made it hard to check empty state
+					$cta_button_url = (string)get_theme_mod( 'cta_button_url' );
+					$cta_button_text = (string)get_theme_mod( 'cta_button_text' );
+					
+					if ( ( $cta_button_url !== '' ) && ( $cta_button_text !== '' ) ): // Only show button if both text and link aren't empty
+				?>
+					<a href="<?php esc_url( $cta_button_url ); ?>" class="btn btn-large algori-shop-cta-button"><?php echo esc_html( $cta_button_text ); ?></a>
+				<?php endif; ?>
 			</div>
 		  
 		  </div><!-- .hero-info -->
