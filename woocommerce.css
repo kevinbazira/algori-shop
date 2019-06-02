@@ -603,7 +603,8 @@ p.no-comments {
 .widget_recently_viewed_products > ul,
 .widget_recent_reviews > ul,
 .widget_top_rated_products > ul,
-.widget_rating_filter > ul {
+.widget_rating_filter > ul,
+.widget_shopping_cart .widget_shopping_cart_content > ul {
 	list-style: none; /* Remove list bullets */
 	padding: 0;
 	margin: 0;
