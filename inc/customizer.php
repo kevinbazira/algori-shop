@@ -65,6 +65,55 @@ function algori_shop_customize_register( $wp_customize ) {
         'settings'			=> array(),
     ) ) );
 	
+	// Add Theme Options Panel
+	$wp_customize->add_panel( 'theme_options', array(
+	  'title'				=> __( 'Theme Options', 'algori-shop' ),
+	  'description'			=> __( 'Adjust Algori Shop Theme Options.', 'algori-shop' ),
+	  'priority'			=> 160,
+	) );
+	
+	// CTA Button Settings Section
+	$wp_customize->add_section( 'cta_button_settings', array(
+		'title'				=> __( 'CTA Button', 'algori-shop' ),
+		'description'		=> __( 'Edit call-to-action button text and link.', 'algori-shop' ),
+		'panel' 			=> 'theme_options', 
+		'priority'			=> 1,
+		'capability'		=> 'edit_theme_options',
+	    'theme_supports' 	=> '', // Rarely needed.
+	) );
+	
+	// CTA Button URL 
+	$wp_customize->add_setting( 'cta_button_url', array(
+	  'type' 				=> 'theme_mod', // or 'option'
+	  'capability' 			=> 'edit_theme_options',
+	  'theme_supports'	 	=> '', // Rarely needed.
+	  'default' 			=> esc_url( home_url().'/shop' ),
+	  'transport' 			=> 'postMessage', // or refresh
+	  'sanitize_callback' 	=> 'esc_url_raw',
+	) );
+
+	$wp_customize->add_control( 'cta_button_url', array(
+	  'label' 				=> __( 'CTA Button URL', 'algori-shop' ),
+	  'type' 				=> 'url',
+	  'section' 			=> 'cta_button_settings',
+	) );
+	
+	// CTA Button Text 
+	$wp_customize->add_setting( 'cta_button_text', array(
+	  'type' 				=> 'theme_mod', // or 'option'
+	  'capability' 			=> 'edit_theme_options',
+	  'theme_supports'	 	=> '', // Rarely needed.
+	  'default' 			=> __( 'Shop NOW', 'algori-shop' ),
+	  'transport' 			=> 'postMessage', // or refresh
+	  'sanitize_callback' 	=> 'sanitize_text_field',
+	) );
+
+	$wp_customize->add_control( 'cta_button_text', array(
+	  'label' 				=> __( 'CTA Button Text', 'algori-shop' ),
+	  'type' 				=> 'text',
+	  'section' 			=> 'cta_button_settings',
+	) );
+	
 }
 add_action( 'customize_register', 'algori_shop_customize_register' );
 
