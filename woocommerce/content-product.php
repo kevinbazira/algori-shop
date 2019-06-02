@@ -12,7 +12,7 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce/Templates
- * @version 3.4.0
+ * @version 3.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -27,7 +27,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 
 
 
-<li <?php wc_product_class("item algori-shop-woocommerce-item"); ?>>
+<li <?php wc_product_class( "item algori-shop-woocommerce-item", $product ); ?>>
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
