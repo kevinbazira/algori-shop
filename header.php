@@ -98,12 +98,13 @@
 				<?php
 					// Get CTA Button customizer settings
 					// I type casted them to (string) because WP was returning false positives on initial load which made it hard to check empty state
-					$cta_button_url = (string)get_theme_mod( 'cta_button_url' );
-					$cta_button_text = (string)get_theme_mod( 'cta_button_text' );
+					$display_cta_button = get_theme_mod( 'algori_shop_display_cta_button', true );
+					$cta_button_url = get_theme_mod( 'algori_shop_cta_button_url', ( class_exists( 'WooCommerce' ) ) ? get_permalink( wc_get_page_id( 'shop' ) ) : '#' );
+					$cta_button_text = get_theme_mod( 'algori_shop_cta_button_text', __( 'Shop Now', 'algori-shop' ) );
 					
-					if ( ( $cta_button_url !== '' ) && ( $cta_button_text !== '' ) ): // Only show button if both text and link aren't empty
+					if ( $display_cta_button ): // Only show button if 'Display CTA Button' checkbox is chosen in customizer
 				?>
-					<a href="<?php esc_url( $cta_button_url ); ?>" class="btn btn-large algori-shop-cta-button"><?php echo esc_html( $cta_button_text ); ?></a>
+					<a href="<?php echo $cta_button_url ?>" class="btn btn-large algori-shop-cta-button"><?php echo esc_html( $cta_button_text ); ?></a>
 				<?php endif; ?>
 			</div>
 		  
