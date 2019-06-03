@@ -4,7 +4,7 @@ Tags: e-commerce, blog, two-columns, right-sidebar, custom-header, custom-menu, 
 Requires at least: 4.9.6
 Tested up to: 5.2.1
 Requires PHP: 5.6.0
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -33,6 +33,11 @@ Algori Shop includes support for the following plugins;
 3. Gutenberg plugin
 
 == Changelog ==
+
+= 1.1.1 - June 03 2019 =
+* Added Customizer theme option to hide/show CTA button
+* Added CTA button default url and text settings
+* Updated POT file in languages folder
 
 = 1.1.0 - June 02 2019 =
 * Added Customizer theme options for editing CTA button text and link
