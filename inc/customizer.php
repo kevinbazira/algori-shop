@@ -31,6 +31,20 @@ function algori_shop_customize_register( $wp_customize ) {
 	*/
 	
 	/**
+	 * Checkbox sanitization callback.
+	 * 
+	 * Sanitization callback for 'checkbox' type controls. This callback sanitizes `$checked`
+	 * as a boolean value, either TRUE or FALSE.
+	 *
+	 * @param bool $checked Whether the checkbox is checked.
+	 * @return bool Whether the checkbox is checked.
+	 */
+	function theme_sanitize_checkbox( $checked ) {
+		// Boolean check.
+		return ( ( isset( $checked ) && true == $checked ) ? true : false );
+	}
+	
+	/**
 	 * Create custom control for Algori Shop Documentation link.
 	 *
 	 * Class WP_Customize_Control is loaded only when theme customizer is acutally used. 
@@ -82,33 +96,50 @@ function algori_shop_customize_register( $wp_customize ) {
 	    'theme_supports' 	=> '', // Rarely needed.
 	) );
 	
-	// CTA Button URL 
-	$wp_customize->add_setting( 'cta_button_url', array(
+	
+	// Display CTA Button 
+	$wp_customize->add_setting( 'algori_shop_display_cta_button', array(
 	  'type' 				=> 'theme_mod', // or 'option'
 	  'capability' 			=> 'edit_theme_options',
 	  'theme_supports'	 	=> '', // Rarely needed.
-	  'default' 			=> esc_url( home_url().'/shop' ),
-	  'transport' 			=> 'postMessage', // or refresh
+	  'default' 			=> true,
+	  'transport' 			=> 'refresh', // or postMessage
+	  'sanitize_callback'   => 'theme_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'algori_shop_display_cta_button', array(
+	  'label' 				=> __( 'Display CTA Button', 'algori-shop' ),
+	  'type' 				=> 'checkbox',
+	  'section' 			=> 'cta_button_settings',
+	) );
+	
+	// CTA Button URL 
+	$wp_customize->add_setting( 'algori_shop_cta_button_url', array(
+	  'type' 				=> 'theme_mod', // or 'option'
+	  'capability' 			=> 'edit_theme_options',
+	  'theme_supports'	 	=> '', // Rarely needed.
+	  'default' 			=> ( class_exists( 'WooCommerce' ) ) ? get_permalink( wc_get_page_id( 'shop' ) ) : '#',
+	  'transport' 			=> 'refresh', // or postMessage
 	  'sanitize_callback' 	=> 'esc_url_raw',
 	) );
 
-	$wp_customize->add_control( 'cta_button_url', array(
+	$wp_customize->add_control( 'algori_shop_cta_button_url', array(
 	  'label' 				=> __( 'CTA Button URL', 'algori-shop' ),
 	  'type' 				=> 'url',
 	  'section' 			=> 'cta_button_settings',
 	) );
 	
 	// CTA Button Text 
-	$wp_customize->add_setting( 'cta_button_text', array(
+	$wp_customize->add_setting( 'algori_shop_cta_button_text', array(
 	  'type' 				=> 'theme_mod', // or 'option'
 	  'capability' 			=> 'edit_theme_options',
 	  'theme_supports'	 	=> '', // Rarely needed.
-	  'default' 			=> __( 'Shop NOW', 'algori-shop' ),
-	  'transport' 			=> 'postMessage', // or refresh
+	  'default' 			=> __( 'Shop Now', 'algori-shop' ),
+	  'transport' 			=> 'refresh', // or postMessage
 	  'sanitize_callback' 	=> 'sanitize_text_field',
 	) );
 
-	$wp_customize->add_control( 'cta_button_text', array(
+	$wp_customize->add_control( 'algori_shop_cta_button_text', array(
 	  'label' 				=> __( 'CTA Button Text', 'algori-shop' ),
 	  'type' 				=> 'text',
 	  'section' 			=> 'cta_button_settings',
