@@ -1641,10 +1641,15 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   position:relative;
   overflow:hidden;
   display:flex;
+  display: -webkit-flex;
   flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
   justify-content: center;
+  -webkit-justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-align-content: flex-start;
   height:50vw;
   min-height:400px;
   max-height:550px;
@@ -1652,7 +1657,6 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   color:#eee;
 }
 .hero-media img{
-  content:"";
   width:100%;
   /*height:100%;*/
   position:absolute;
@@ -1665,8 +1669,22 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   background-size:cover;
   background-attachment:fixed;
   animation: grow 60s  linear 10ms infinite;
+  -webkit-animation-duration: 60s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 10ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: none;
+  -webkit-animation-play-state: running;
+  -webkit-animation-name: grow;
   transition:all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;  
   z-index:-2
+}
+@-webkit-keyframes grow{
+  0% { -webkit-transform:scale(1)}
+  50% { -webkit-transform:scale(1.2)}
+  100% { -webkit-transform:scale(1)}
 }
 .header-hero a{
   color:#eee
@@ -1692,10 +1710,6 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 }
 .hero-btn{
   /*font-style:italic;*/
-}
-@keyframes grow{
-  0% { transform:scale(1)}
-  50% { transform:scale(1.2)}
 }
 
 @media all and (max-width: 480px) { 
