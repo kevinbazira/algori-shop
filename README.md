@@ -6,7 +6,7 @@ Tags: e-commerce, blog, two-columns, right-sidebar, custom-header, custom-menu, 
 
 Requires at least: WP 4.9.6
 * Tested up to: WP 5.2.1
-* Stable tag: 1.1.1
+* Stable tag: 1.1.2
 * License: GNU General Public License v3 or later
 * License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -38,6 +38,12 @@ Algori Shop includes support for the following plugins;
 * Gutenberg plugin
 
 # Changelog 
+
+= 1.1.2 - June 25 2019 =
+* Fixed Header Image CSS animation for older Safari browsers
+* Added CSS3 animation support for Safari browser 4.0 - 8.0
+* Added CSS3 transition support for Safari browser prior 6.1
+* Added CSS3 keyframes support for Safari browser prior 10.0
 
 = 1.1.1 - June 03 2019 =
 * Added Customizer theme option to hide/show CTA button
