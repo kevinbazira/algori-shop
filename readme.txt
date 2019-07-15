@@ -4,7 +4,7 @@ Tags: e-commerce, blog, two-columns, right-sidebar, custom-header, custom-menu, 
 Requires at least: 4.9.6
 Tested up to: 5.2.1
 Requires PHP: 5.6.0
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -33,6 +33,9 @@ Algori Shop includes support for the following plugins;
 3. Gutenberg plugin
 
 == Changelog ==
+
+= 1.1.3 - Jul 15 2019 =
+* Removed big white space below Header Image for both tablets and mobile screens
 
 = 1.1.2 - June 25 2019 =
 * Fixed Header Image CSS animation for older Safari browsers
